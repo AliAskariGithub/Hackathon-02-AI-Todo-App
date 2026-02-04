@@ -208,3 +208,53 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Project Overview: AI Todo Application
+
+This is a full-stack AI-powered todo application built with modern web technologies. The project includes both frontend and backend components with the following key features and technologies:
+
+### Tech Stack
+- **Frontend**: Next.js 16.1.2 with App Router, React 18+, TypeScript
+- **Backend**: Python 3.11+, FastAPI, SQLModel, PostgreSQL (Neon serverless)
+- **Authentication**: JWT-based custom authentication system with React Context
+- **Database**: PostgreSQL with Neon serverless hosting
+- **UI Components**: Tailwind CSS with shadcn/ui components
+- **Icons**: Lucide React
+
+### Key Features Implemented
+1. **User Authentication**: Complete login/signup flow with email/username and password
+2. **Task Management**: Full CRUD operations on tasks with optimistic updates
+3. **Testimonials System**: User-submitted testimonials with ratings and feedback
+4. **Responsive UI**: Mobile-friendly design with loading states and error handling
+5. **JWT Authentication**: Secure token-based authentication with proper session management
+6. **Database Integration**: PostgreSQL with Neon hosting for serverless scalability
+
+### Architecture Highlights
+- Client-side authentication using localStorage and React Context
+- Server-side rendering with Next.js App Router
+- API-first backend with FastAPI and automatic OpenAPI documentation
+- Database operations with SQLModel for type safety
+- Proper error handling and loading states throughout the application
+
+### Security Considerations
+- JWT tokens stored in localStorage (with awareness of XSS risks)
+- Input validation on both frontend and backend
+- Password hashing with bcrypt
+- Rate limiting considerations (to be implemented)
+
+### Deployment Configuration
+- Environment files provided with .env.example for both frontend and backend
+- Configuration for both local development and production environments
+- Proper separation of concerns between frontend and backend services
+- Production URLs:
+  - Frontend: https://ai-todo-psi.vercel.app
+  - Backend: https://aliaskariface-backend-todo-app.hf.space
+
+### Development Best Practices Applied
+- Type safety with TypeScript throughout the frontend
+- Async/await patterns for all API operations
+- Component-based architecture with proper separation of concerns
+- Error boundaries and proper error handling
+- Loading states and skeleton screens for better UX
+- Clean, maintainable code with proper documentation
+- Proper linting and formatting with ESLint and Prettier

@@ -2,7 +2,7 @@
 import { useSession } from '@/lib/auth';
 
 // Base API configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000' || 'http://127.0.0.1:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.NEXT_PUBLIC_API_BASE_LOCAL_URL || 'http://localhost:8000';
 
 /**
  * Generic API client for making authenticated requests

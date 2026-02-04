@@ -6,7 +6,7 @@ import { auth } from '@/lib/auth';
 import authService from '@/services/auth-service';
 
 const client = createAuthClient({
-  baseURL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL || "http://localhost:3000",
+  baseURL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL || "http://localhost:3000" || "http://localhost:3001" || "http://localhost:3002" || "http://localhost:3003" || "http://localhost:3004" || "http://localhost:3005",
   ...auth
 });
 
